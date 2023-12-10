@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "JobDesignation";
+}
+
+<link href="~/Content/Design/PageDesign.css" rel="stylesheet" />
+
+@using (Html.BeginForm("", ""))
+{
+    <div class="container">
+        <div class="row headingborder">
+            <h4>Create Designation</h4>
+        </div>
+    </div>
+    <br />
+    <div class="container All">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="col-md-3 span-content">Designation</span>
+                @Html.TextBox("txt_designation", "", new { @class = "form-control", placeholder = "Enter Designation." })
+            </div>
+            <div class="col-md-6 span-content">
+                <span class="col-md-3">Is Active ?</span>
+                @Html.CheckBox("IsActive", true)
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <span class="col-md-3 span-content">Job Type</span>
+                @Html.RadioButton("jobtype", "WFO") <span class="span-content">Work From Office(WFO)</span>
+                @Html.RadioButton("jobtype", "WFH") <span class="span-content">Work From Home(WFH)</span>
+            </div>
+        </div>
+        <br />
+        <div class="row text-center">
+            <input type="submit" value="SAVE" class="btn btn-success" />
+        </div>
+    </div>
+}
+

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EmployeeManagement.GET_DegenerationResult>
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+@using (Html.BeginForm("EmployeeRegistrationSave", "EmployeeService"))
+{
+    <div class="card">
+        <div class="card-header text-center">
+            <h1>Employee Registration</h1>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.DropDownList("GET_DegenerationResult", ViewBag.deg as SelectList, "--Select Designation--", new { @class = "form-control" });
+                        </div>
+                        <div class="col-md-6">
+                            <input type="file" name="Emp_Img" id="flMigrationTC" onchange="ImagePreview()">
+                          
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.TextBox("txt_Username", "", new { @class = "form-control", placeholder = "Enter Name Here." });
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBox("txt_email", "", new { @class = "form-control", placeholder = "Enter Email Here." });
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.TextBox("txt_localAddress", "", new { @class = "form-control", placeholder = "Enter Local Address Here." });
+                        </div>
+                        <div class="col-md-6">
+                            <input type="submit" value="SAVE" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function ImagePreview() {
+            debugger;
+          
+        }
+    </script>
+}
+

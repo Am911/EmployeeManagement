@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HRMS" Class="DesignationListDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-U2DB4HD;Initial Catalog=HRMS;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HRMSConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GET_Degeneration" Method="GET_Degeneration">
+    <ElementType Name="GET_DegenerationResult">
+      <Column Name="Pk_DegId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Degeneration" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

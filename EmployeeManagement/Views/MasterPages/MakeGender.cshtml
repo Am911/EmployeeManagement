@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "MakeGender";
+}
+<link href="~/Content/Design/PageDesign.css" rel="stylesheet" />
+@using (Html.BeginForm("SaveGender", "MasterPages"))
+{
+
+    <div class="container">
+        <div class="row headingborder">
+            <h4>Create/Make Gender</h4>
+        </div>
+    </div>
+    <br />
+    <div class="container All">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="col-md-3 span-content">Gender</span>
+                @Html.TextBox("txt_gender", "", new { @class = "form-control", placeholder = "Enter Gender." })
+            </div>
+            <div class="col-md-6 span-content">
+                <span class="col-md-3">Is Active ?</span>
+                @Html.CheckBox("IsActive", true)
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <span class="col-md-3 span-content">Alias</span>
+                @Html.TextBox("txt_alias", "", new { @class = "form-control", placeholder = "Enter Alias." })
+            </div>
+        </div>
+
+        <br />
+        <div class="row text-center">
+            <input type="submit" value="SAVE" class="btn btn-success" />
+        </div>
+    </div>
+    <br />
+}
+<div class="container">
+    <div class="row headingborder"><h4>Gender List</h4></div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th >Gender</th>
+                <th >Is Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var gen in ViewBag.Gender)
+            {
+                <tr>
+                    <td>@gen.Gender</td>
+                    <td>@gen.IsActive</td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

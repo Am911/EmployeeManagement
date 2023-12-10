@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Gender">
+  <DataContextMoniker Name="/GenderDataContext" />
+  <nestedChildShapes>
+    <classShape Id="65f4262c-bbb0-4938-8199-32fbf5df9ffc" absoluteBounds="1.75, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/GenderDataContext/COMM_GENDER_MST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e741401c-2571-4aef-a4b8-0f4fab1d8de7" absoluteBounds="1.7650000000000001, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
